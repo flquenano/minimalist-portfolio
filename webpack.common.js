@@ -12,7 +12,39 @@ module.exports = {
     path: path.resolve(__dirname, "public"),
     filename: "[name].bundle.js"
   },
-  module: {},
+  module: {
+    rules: [
+      {
+        test: /\.j(s|sx)$/,
+        exclude: /node_modules/,
+        use: ["babel-loader"]
+      },
+      {
+        test: /\.(sc|c)ss$/,
+        exclude: /node_modules/,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              importLoaders: 2
+            }
+          },
+          "postcss-loader",
+          "sass-loader"
+        ]
+      },
+      {
+        test: /\.svg$/,
+        exclude: /node_modules/,
+        use: ["@svgr/webpack", "url-loader"]
+      },
+      {
+        test: /\.(jpg|jpeg|png)$/,
+        use: ["url-loader"]
+      }
+    ]
+  },
   resolve: {
     alias: {
       scss: path.resolve(__dirname, "src", "sass"),
