@@ -9,9 +9,7 @@ module.exports = merge(common, {
     port: 3000,
     publicPath: "/",
     writeToDisk: true,
-    hot: true,
     open: true,
-    hotOnly: true,
     historyApiFallback: true,
     overlay: true
   }

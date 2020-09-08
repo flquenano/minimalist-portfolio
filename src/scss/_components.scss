@@ -1,0 +1,112 @@
+.heading {
+  &-1 {
+    font-size: 3.125rem;
+    line-height: 3.125rem;
+    letter-spacing: -0.45px;
+  }
+  &-2 {
+    font-size: 2.5rem;
+    line-height: 2.625rem;
+    letter-spacing: -0.357143px;
+  }
+  &-3 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+    letter-spacing: -0.29px;
+  }
+}
+
+.body {
+  &-1 {
+    font-size: 1rem;
+    line-height: 30px;
+  }
+  &-2 {
+    font-size: 0.9375rem;
+    line-height: 30px;
+  }
+}
+
+.btn {
+  font-size: 0.75rem;
+  font-weight: $font-semiBold;
+  font-family: $font-body;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: none;
+  transition: all 250ms;
+  &:hover {
+    cursor: pointer;
+  }
+  &--primary {
+    @extend .btn;
+    color: $secondary-white;
+    width: 12.5rem;
+    height: 3rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: flex-start;
+    background: linear-gradient(
+      to right,
+      darken($primary-dark-blue, 5%) 25%,
+      $primary-dark-blue 25%
+    );
+    text-align: center;
+    transition: all 550ms;
+    &-arrow {
+      margin: 0 1.125rem;
+    }
+    &-text {
+      padding: 0 2rem;
+    }
+    &:hover {
+      background: linear-gradient(
+        to right,
+        darken($primary-desaturated-cyan, 5%) 25%,
+        $primary-desaturated-cyan 25%
+      );
+      .btn--primary-arrow > g {
+        stroke: $secondary-white;
+      }
+    }
+    // &::before {
+    //   content: url("images/icons/down-arrows.svg");
+    //   padding: 0.9125rem 1.125rem;
+    //   background: darken($primary-dark-blue, 5%);
+    // }
+    // &:hover {
+    //   background: $primary-desaturated-cyan;
+    //   &::before {
+    //     background: darken($primary-desaturated-cyan, 10%);
+    //   }
+    // }
+  }
+  &--secondary {
+    @extend .btn;
+    color: $primary-grayish-dark-blue;
+    border: 1px solid $primary-grayish-dark-blue;
+    padding: 1rem 2.125rem;
+    background: $secondary-white;
+    &:hover {
+      color: $secondary-white;
+      background: $primary-grayish-dark-blue;
+    }
+  }
+}
+
+.txt {
+  font-size: 0.8125rem;
+  line-height: 1.875rem;
+  color: $primary-grayish-dark-blue;
+  &::placeholder {
+    opacity: 0.4;
+  }
+  &__box {
+    @extend .txt;
+  }
+  &__area {
+    @extend .txt;
+  }
+}

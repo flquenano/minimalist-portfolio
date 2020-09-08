@@ -47,16 +47,17 @@ module.exports = {
   },
   resolve: {
     alias: {
-      scss: path.resolve(__dirname, "src", "sass"),
+      scss: path.resolve(__dirname, "src", "scss"),
       images: path.resolve(__dirname, "src", "images"),
       components: path.resolve(__dirname, "src", "components")
-    }
+    },
+    extensions: [".scss", ".css", ".js", ".jsx", ".svg", ".png"]
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: "./src/template.html",
-      favicon: "./images/favicon-32x32.png"
+      favicon: "./src/images/favicon-32x32.png"
     })
   ]
 };

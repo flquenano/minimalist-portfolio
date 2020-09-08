@@ -1,0 +1,59 @@
+@import "scss/variables";
+@import "scss/mixins";
+
+.nav {
+  width: 100%;
+  padding: 2rem 0 2.5rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  // border-bottom: 1px solid rgba($primary-grayish-dark-blue, 0.15);
+  &-animation {
+    &-enter {
+      opacity: 0;
+      transform: translateY(-10vh) translateX(10vh);
+      &-active {
+        opacity: 1;
+        transform: none;
+        transition: all 250ms;
+      }
+    }
+    &-exit {
+      opacity: 1;
+      &-active {
+        opacity: 0;
+        transform: translateY(-10vh) translateX(10vh);
+        transition: all 250ms;
+      }
+    }
+  }
+  &__link {
+    color: $secondary-white;
+  }
+  &__list {
+    display: none;
+  }
+  &__mobile {
+    position: relative;
+    transition: all 350ms ease-in;
+    &-list {
+      position: fixed;
+      z-index: 9999;
+      top: 5.375rem;
+      right: 5%;
+      background: $primary-grayish-dark-blue;
+      padding: 2.5rem 3.875rem;
+      &-item {
+        text-transform: uppercase;
+        &:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+    &-icon {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

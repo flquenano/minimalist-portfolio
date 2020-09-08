@@ -1,0 +1,15 @@
+@import "scss/variables";
+@import "scss/mixins";
+
+.aboutMe {
+  width: clamp(311px, 100%, 350px);
+  border-bottom: 1px solid rgba($primary-grayish-dark-blue, 0.15);
+  border-top: 1px solid rgba($primary-grayish-dark-blue, 0.15);
+  padding: 2rem 0 3.1875rem;
+  &__heading {
+    margin-bottom: 1.625rem;
+  }
+  &__body {
+    margin-bottom: 1.5rem;
+  }
+}

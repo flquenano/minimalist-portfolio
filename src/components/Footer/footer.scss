@@ -1,0 +1,47 @@
+@import "scss/variables";
+@import "scss/mixins";
+
+footer {
+  width: 100%;
+  display: flex;
+  place-content: center;
+  background: $primary-grayish-dark-blue;
+}
+
+.footer {
+  padding: 3.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__logo {
+    & path {
+      fill: $secondary-white;
+    }
+  }
+  &__sns {
+    & path {
+      fill: $secondary-white;
+    }
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+  &__nav {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: $secondary-white;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 2.5rem 0;
+    &-item {
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

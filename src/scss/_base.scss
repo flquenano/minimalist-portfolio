@@ -1,0 +1,60 @@
+html {
+  font-size: $font-size;
+  font-family: $font-body;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-family: $font-heading;
+  font-weight: 700;
+}
+
+ul,
+body,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: $secondary-very-light-grey;
+}
+
+#root {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: -5px 0 10px rgb(230, 230, 230), 5px 0 10px rgb(230, 230, 230);
+  overflow-x: hidden;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: clamp(311px, 90%, 1111px);
+}
