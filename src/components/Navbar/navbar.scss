@@ -7,7 +7,9 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  // border-bottom: 1px solid rgba($primary-grayish-dark-blue, 0.15);
+  @include tablet-ls {
+    padding: 4rem 0 5.865rem;
+  }
   &-animation {
     &-enter {
       opacity: 0;
