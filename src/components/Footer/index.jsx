@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./footer.scss";
 
 import { ReactComponent as Logo } from "images/logo.svg";
@@ -12,11 +13,18 @@ const Footer = () => (
       <div className="footer__left">
         <Logo className="footer__logo" />
         <ul className="footer__nav">
-          <li className="footer__nav-item">Home</li>
-          <li className="footer__nav-item">Portfolio</li>
-          <li className="footer__nav-item">Contact me</li>
+          <li className="footer__nav-item">
+            <Link to="/">Home</Link>
+          </li>
+          <li className="footer__nav-item">
+            <Link to="/portfolio">Portfolio</Link>
+          </li>
+          <li className="footer__nav-item">
+            <Link to="/contact-me">Contact me</Link>
+          </li>
         </ul>
       </div>
+
       <div className="footer__right">
         <Github className="footer__sns" />
         <Twitter className="footer__sns" />

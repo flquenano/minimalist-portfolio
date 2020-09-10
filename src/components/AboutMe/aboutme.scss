@@ -6,6 +6,9 @@
   border-bottom: 1px solid rgba($primary-grayish-dark-blue, 0.15);
   border-top: 1px solid rgba($primary-grayish-dark-blue, 0.15);
   padding: 2rem 0 3.1875rem;
+  @include tablet-ls {
+    padding: 3.1875rem 0 2.875rem;
+  }
   &__heading {
     margin-bottom: 1.625rem;
   }

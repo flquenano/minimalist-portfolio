@@ -1,0 +1,34 @@
+@import "scss/variables";
+@import "scss/mixins";
+
+.git {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5625rem 0;
+  width: 100%;
+  border-top: 1px solid rgba($primary-grayish-dark-blue, 0.15);
+  @include md {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  &__heading {
+    padding-bottom: 1.5rem;
+    @include md {
+      padding-bottom: 0;
+      width: 40%;
+    }
+  }
+  &__content {
+    @include md {
+      width: 60%;
+    }
+  }
+  &__body {
+    margin-bottom: 1.5rem;
+  }
+  &__icon {
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}

@@ -32,10 +32,32 @@
   }
   &__list {
     display: none;
+    @include tablet-pt {
+      display: flex;
+      &-item {
+        transition: all 250ms;
+        &:not(:first-child) {
+          margin-left: 2.625rem;
+        }
+        &:hover {
+          cursor: pointer;
+          color: $primary-desaturated-cyan;
+        }
+      }
+    }
   }
   &__mobile {
     position: relative;
     transition: all 350ms ease-in;
+    @include tablet-pt {
+      &-icon {
+        display: none;
+      }
+      &-list {
+        display: none;
+      }
+      display: none;
+    }
     &-list {
       position: fixed;
       z-index: 9999;

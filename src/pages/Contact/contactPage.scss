@@ -1,0 +1,77 @@
+@import "scss/variables";
+@import "scss/mixins";
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  position: relative;
+  &:last-child {
+    padding-bottom: 3rem;
+  }
+  & > label {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    padding: 0.5rem 0;
+    margin-bottom: 0.5rem;
+  }
+  .warning-message {
+    color: $secondary-bright-red;
+    margin-top: 5px;
+    font-family: $font-body;
+    font-size: 0.625rem;
+    font-weight: bold;
+    font-style: italic;
+  }
+}
+
+.contactForm {
+  width: 100%;
+  // border-top: 1px solid rgba($primary-grayish-dark-blue, 0.15);
+  padding-bottom: 5rem;
+  @include md {
+    width: 60%;
+  }
+}
+
+.contact-me {
+  padding-top: 2rem;
+  border-top: 1px solid rgba($primary-grayish-dark-blue, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  @include md {
+    flex-direction: row;
+  }
+}
+
+.form {
+  &__input {
+    border: none;
+    border-radius: 3px;
+    width: 100%;
+    background: rgba($primary-grayish-dark-blue, 0.1);
+    padding: 1rem;
+    &-txt {
+      height: 3rem;
+    }
+    &:focus {
+      outline: 1px solid $primary-desaturated-cyan;
+    }
+    &--warning {
+      outline: 1px solid $secondary-bright-red;
+    }
+  }
+  &__heading {
+    padding-bottom: 2rem;
+    @include md {
+      width: 40%;
+    }
+  }
+}

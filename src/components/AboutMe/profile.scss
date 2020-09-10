@@ -1,4 +1,10 @@
+@import "scss/mixins";
+
 .profile {
   width: 100%;
   margin-bottom: 2rem;
+  @include tablet-ls {
+    height: 100%;
+    margin-bottom: 0;
+  }
 }

@@ -24,6 +24,7 @@
   &-2 {
     font-size: 0.9375rem;
     line-height: 30px;
+    opacity: 0.8;
   }
 }
 
@@ -35,6 +36,7 @@
   letter-spacing: 2px;
   border: none;
   transition: all 250ms;
+  white-space: nowrap;
   &:hover {
     cursor: pointer;
   }
@@ -71,17 +73,6 @@
         stroke: $secondary-white;
       }
     }
-    // &::before {
-    //   content: url("images/icons/down-arrows.svg");
-    //   padding: 0.9125rem 1.125rem;
-    //   background: darken($primary-dark-blue, 5%);
-    // }
-    // &:hover {
-    //   background: $primary-desaturated-cyan;
-    //   &::before {
-    //     background: darken($primary-desaturated-cyan, 10%);
-    //   }
-    // }
   }
   &--secondary {
     @extend .btn;
@@ -92,6 +83,19 @@
     &:hover {
       color: $secondary-white;
       background: $primary-grayish-dark-blue;
+    }
+  }
+  &--submit {
+    @extend .btn;
+    color: $secondary-white;
+    width: 12.5rem;
+    height: 3rem;
+    background: $primary-dark-blue;
+    text-align: center;
+    transition: all 550ms;
+    margin-top: 1rem;
+    &:hover {
+      background: $primary-desaturated-cyan;
     }
   }
 }

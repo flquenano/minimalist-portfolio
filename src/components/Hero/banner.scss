@@ -1,4 +1,12 @@
+@import "scss/variables";
+@import "scss/mixins";
+
 .banner {
   width: 100%;
+
   margin-bottom: 1.5rem;
+  @include tablet-ls {
+    margin-bottom: 0;
+    height: 100%;
+  }
 }

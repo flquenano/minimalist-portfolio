@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Button from "components/Button/Secondary";
 
 import "./aboutme.scss";
@@ -16,7 +17,9 @@ const AboutMe = () => (
       nature whether that’s going for a walk, run or cycling. I’d love you to
       check out my work.
     </p>
-    <Button text="Go to portfolio" />
+    <Link to="/portfolio">
+      <Button text="Go to portfolio" />
+    </Link>
   </div>
 );
 
